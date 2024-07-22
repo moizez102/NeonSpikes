@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk2sljde358i2"]
+
+[ext_resource type="Texture2D" uid="uid://d1v5ulcgjcr5p" path="res://Assets/Obstacle.png" id="1_mfn80"]
+[ext_resource type="Texture2D" uid="uid://bmpfnhdkuwm1x" path="res://Assets/Obstacleglow.png" id="2_d1jk6"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hipog"]
+blend_mode = 1
+
+[node name="Obstacle" type="Area2D" groups=["DynamicObject"]]
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-54, -117, 54, -118, 20, 11.3333, 28, 50.6667, -10.6667, 107.333, 4, 62, -15.892, 31.0589)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 0.392157)
+material = SubResource("CanvasItemMaterial_hipog")
+position = Vector2(0.666667, 21.3333)
+texture = ExtResource("2_d1jk6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mfn80")
